@@ -142,113 +142,113 @@ public class Maze {
         }
     }
     /*pacman position*/
-    // public void pacmanPosition(char usrSelection, int mazeType) {
-    //     switch(usrSelection) {
-    //         case 'W':
-    //             if(pacManY == 1) {
-    //                 System.out.println("move not allowed"); //sample, edit as needed
-    //             } else if (mazeType == 1 && col > row){
-    //                 System.out.println("move not allowed, this is a wall position");
-    //                 break;
-    //             } else if (mazeType == 2 && col < row) {
-    //                 System.out.println("move not allowed, this is a wall position");
-    //                 break;
-    //             } else if (mazeType == 3){
-    //                 for (int i = 0; i < length; i++) {
-    //                  for (int j = 0; j< width; j++) {
-    //                     if(i == 0 || i == length) {
-    //                          pacman should not be on these lines
-    //                     } else if (i%2 != 0 && i != length) { 
-    //                         if(j ==1 || j < width-2)
-    //                             pacManY-- (pacman goes down)
-    //                         -------reprint maze here and BREAK---------------
-    //                     } else if( i%2 == 0 && i>0) {             //if pacman is on even line and the line below is not the hashtags
-    //                         pacman will be on either j == 1 or on j == width -1 and going down is fine
-    //                          pacManY--
-    //                         -------reprint maze here and BREAK---------------
-    //                     }
-    //                  }
-    //                 }                 
-    //             }
-    //             else {
-    //                 col--;
-    //          -------reprint maze here and BREAK---------------
-    //                 break;
-    //             }
-    //              
-    //         case 'S':
-    //             if( pacManY == mazeLength -1) {
-    //                 System.out.println("move not allowed, end of maze already");
-    //                 break;
-    //             } else if( mazeType == 1 ){
-    //                 pacman can go down (pacManY++)
-    //                 reprint maze with updated position
-    //                 break;
-    //             } else if (mazeType == 2 && pacManX < pacManY) {
-    //                 pacman cannot go down because wall
-    //                 do not reprint maze
-    //                 break
-    //             } else if (mazeType == 3) {
-    //                 for (int i = 0; i < length; i++) {
-    //                  for (int j = 0; j< width; j++) {
-    //                     if(i == 0 || i == length) {
-    //                          pacman should not be on these lines
-    //                     } else if (i%2 != 0 && i != length) { 
-    //                         if(j ==1 || j < width-2)
-    //                             pacManY++ (pacman goes down)
-    //                         -------reprint maze here and BREAK---------------
-    //                     } else if( i%2 == 0 && i<length-1) {             //if pacman is on even line and the line below is not the hashtags
-    //                         pacman will be on either j == 1 or on j == width -1 and going down is fine
-    //                          pacManY++
-    //                          reprint maze here and BREAK
-    //                     }
-    //                  }
-    //                 }
-    //             }
-    //             col++;
-    //      -------reprint maze here and BREAK---------------
-    //             break;
-    //         case 'A':
-    //             if(pacManX == 1) {
-    //                 System.out.println("not allowed first col already");
-    //                 break;
-    //             } else if (mazeType == 1 && pacManX ==1 ) {
-    //                 System.out.println("move not allowed, pacman must stay inside maze boundary");
-    //                 break;
-    //             } else if (mazeType == 2 && pacManX == pacManY) {
-    //                 System.out.println("move not allowed, this is a wall position");
-    //                 break;
-    //             } else if(mazeType == 3){
-    //                 if(pacManY == 0 || pacManY == length || pacManY%2 == 0){
-    //                     System.out.println("pacman cannot go left. illegal move")
-    //                 }
-    //             }
-    //             else {
-    //                pacManX--
-    //         -------reprint maze here and BREAK---------------
-    //                break
-    //             }
-    //         case 'D':
-    //             if(pacManX == width-1) {
-    //                 System.out.println("not allowed last col already, must stay inside boundary");
-    //                 break;
-    //             } else if (mazeType == 1 && pacManX == pacManY) {
-    //                 System.out.println("move not allowed, this is a wall position");
-    //                 break;
-    //             } else if (mazeType == 2 && pacManX == width - 1) {
-    //                 System.out.println("move not allowed, this is the maze boundary");
-    //                 break;
-    //             } else if (mazeType == 3) {
-    //                 if(pacManY == 0 || pacManY == length || pacManY%2 == 0){
-    //                     System.out.println("pacman cannot go right. illegal move")
-    //                 }
-    //             }
-    //             else {
-    //             pacManX++;
-    //      -------reprint maze here and BREAK---------------
-    //             break;
-    //             }
-    //     }
+    public void pacmanPosition(char usrSelection, int mazeType) {
+        switch(usrSelection) {
+            case 'W':
+                if(pacManY == 1) {
+                    System.out.println("move not allowed"); //sample, edit as needed
+                } else if (mazeType == 1 && col > row){
+                    System.out.println("move not allowed, this is a wall position");
+                    break;
+                } else if (mazeType == 2 && col < row) {
+                    System.out.println("move not allowed, this is a wall position");
+                    break;
+                } else if (mazeType == 3){
+                    for (int i = 0; i < length; i++) {
+                     for (int j = 0; j< width; j++) {
+                        if(i == 0 || i == length) {
+                             pacman should not be on these lines
+                        } else if (i%2 != 0 && i != length) { 
+                            if(j ==1 || j < width-2)
+                                pacManY-- (pacman goes down)
+                            -------reprint maze here and BREAK---------------
+                        } else if( i%2 == 0 && i>0) {             //if pacman is on even line and the line below is not the hashtags
+                            pacman will be on either j == 1 or on j == width -1 and going down is fine
+                             pacManY--
+                            -------reprint maze here and BREAK---------------
+                        }
+                     }
+                    }                 
+                }
+                else {
+                    col--;
+             -------reprint maze here and BREAK---------------
+                    break;
+                }
+                 
+            case 'S':
+                if( pacManY == mazeLength -1) {
+                    System.out.println("move not allowed, end of maze already");
+                    break;
+                } else if( mazeType == 1 ){
+                    pacman can go down (pacManY++)
+                    reprint maze with updated position
+                    break;
+                } else if (mazeType == 2 && pacManX < pacManY) {
+                    pacman cannot go down because wall
+                    do not reprint maze
+                    break
+                } else if (mazeType == 3) {
+                    for (int i = 0; i < length; i++) {
+                     for (int j = 0; j< width; j++) {
+                        if(i == 0 || i == length) {
+                             pacman should not be on these lines
+                        } else if (i%2 != 0 && i != length) { 
+                            if(j ==1 || j < width-2)
+                                pacManY++ (pacman goes down)
+                            -------reprint maze here and BREAK---------------
+                        } else if( i%2 == 0 && i<length-1) {             //if pacman is on even line and the line below is not the hashtags
+                            pacman will be on either j == 1 or on j == width -1 and going down is fine
+                             pacManY++
+                             reprint maze here and BREAK
+                        }
+                     }
+                    }
+                }
+                col++;
+         -------reprint maze here and BREAK---------------
+                break;
+            case 'A':
+                if(pacManX == 1) {
+                    System.out.println("not allowed first col already");
+                    break;
+                } else if (mazeType == 1 && pacManX ==1 ) {
+                    System.out.println("move not allowed, pacman must stay inside maze boundary");
+                    break;
+                } else if (mazeType == 2 && pacManX == pacManY) {
+                    System.out.println("move not allowed, this is a wall position");
+                    break;
+                } else if(mazeType == 3){
+                    if(pacManY == 0 || pacManY == length || pacManY%2 == 0){
+                        System.out.println("pacman cannot go left. illegal move")
+                    }
+                }
+                else {
+                   pacManX--
+            -------reprint maze here and BREAK---------------
+                   break
+                }
+            case 'D':
+                if(pacManX == width-1) {
+                    System.out.println("not allowed last col already, must stay inside boundary");
+                    break;
+                } else if (mazeType == 1 && pacManX == pacManY) {
+                    System.out.println("move not allowed, this is a wall position");
+                    break;
+                } else if (mazeType == 2 && pacManX == width - 1) {
+                    System.out.println("move not allowed, this is the maze boundary");
+                    break;
+                } else if (mazeType == 3) {
+                    if(pacManY == 0 || pacManY == length || pacManY%2 == 0){
+                        System.out.println("pacman cannot go right. illegal move")
+                    }
+                }
+                else {
+                pacManX++;
+         -------reprint maze here and BREAK---------------
+                break;
+                }
+        }
     /*
      * for a horizontal maze:
      * pacman cannot move to even numbered lines 0 && last line at all or cannot move to even numbered lines unless col != 1 or col = width-1
